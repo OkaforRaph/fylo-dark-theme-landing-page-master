@@ -47,13 +47,18 @@ ul li {
 .cta {
     color: var(--white);
     background-color: var(--Blue);
-    padding: 15px 60px;
+    padding: 15px 50px;
     border: 1px solid var(--Blue);
     border-radius: 30px;
 }
 
 h2 {
     font-size: 40px;
+}
+
+main {
+    position: relative;
+    padding-bottom: 200px;
 }
 
 /* Navigation  */
@@ -83,7 +88,7 @@ li {
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     background: var(--intro-email-bg) url(./images/bg-curvy-desktop.svg) bottom no-repeat;
     /* background-size: 100% 270px; */
 }
@@ -146,8 +151,134 @@ div.cards {
 }
 
 
+/* Testimonials */
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 140px;
+}
+
+.testimonial {
+    background: var(--testimonial-bg);
+    padding: 45px 40px 0px 45px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.testimonial:first-child::before {
+    content: url(./images/bg-quotes.png);
+    position: absolute;
+    top: -35px;
+    left: -15px;
+    z-index: -1;
+}
+
+.testimonial p {
+    margin-bottom: 25px;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.div h3 {
+    font-size: 15px;
+}
+
+.div p {
+    font-size: 10px;
+}
 
 
+
+/* Sign Up */
+
+.sign_up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--intro-email-bg);
+    padding: 50px 50px 40px 50px;
+    border-radius: 5px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -140px;
+    max-width: 70vw;
+   
+
+}
+
+.sign_up p {
+    margin: 30px 0px 36px;
+}
+
+input {
+    max-width: 380px;
+    height: 50px;
+    padding: 20px 47px;
+    outline: none;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+input::placeholder {
+    opacity: 0.4;
+}
+
+/* Last Section */
+
+section.last {
+    background-color: var(--footer-bg);
+    padding: 200px 80px 60px 80px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 4fr 3fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 50px;
+    margin-top: 50px;
+}
+
+.footer_location {
+    display: grid;
+    grid-template-columns: 5% 95%;
+}
+
+span {
+    padding-left: 20px;
+}
+
+.footer_contact p {
+    margin-bottom: 26px;
+}
+
+.footer_link, .footer_links {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.footer_link a {
+    margin-bottom: 20px;
+}
+
+.footer_link a, .footer_links a {
+    text-decoration: none;
+    color: var(--White);
+}
 
 
 .attribution {
@@ -157,4 +288,134 @@ div.cards {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+
+
+/* Mobile 380px */
+
+@media screen and (max-width: 780px) {
+    html {
+        font-size: 10px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    /* Nav bar */
+
+    .nav {
+        padding: 24px 10px;
+    }
+
+    .nav_items :not(:last-child) {
+        padding-right: 23px;
+    }
+
+    .logo img {
+        width: 82px;
+        height: 24px;
+    }
+
+    /* Hero Section */
+
+    .hero img {
+        width: 302px;
+        height: 225px;
+    }
+
+    .hero_text {
+        width: 100%;
+    }
+
+    .hero_text h2 {
+        width: 302px;
+        margin: 23px auto;
+    }
+
+    .hero p {
+        width: 292px;
+        font-size: 12px;
+        padding: 0px 0px;
+        margin: 0px auto 23px ;
+    }
+
+    /* Features Section */
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 87px 0px;
+        padding: 0px 38px;
+        margin: 40px 0px 60px;
+    }
+
+
+    /* Stay Productive Section */
+
+    .productive {
+        flex-direction: column;
+        padding: 0 25px;
+    }
+
+    .productive p {
+        max-width: 100%;
+
+    }
+
+    .productive h2 {
+        width: 100%;
+    }
+
+    .second_illustration img {
+        height: 215px;
+        margin: 0px 0px 52px;
+
+    }
+
+    /* Testmonials */
+
+    .testimonials {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 150px 22px;
+
+    }
+
+    .testimonial:first-child::before {
+        left: 4px;
+    }
+
+    /* Sign Up */
+
+    .sign_up {
+        padding: 40px 25px;
+        bottom: -175px;
+
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input {
+        /* width: 280px; */
+        margin: 8px 0px;
+    }
+
+    /* Footer */
+
+    section.last {
+        padding: 280px 27px 42px 27px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+
+
+    
 }
