@@ -88,7 +88,7 @@ li {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
     background: var(--intro-email-bg) url(./images/bg-curvy-desktop.svg) bottom no-repeat;
     /* background-size: 100% 270px; */
 }
